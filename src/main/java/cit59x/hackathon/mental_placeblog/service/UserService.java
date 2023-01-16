@@ -27,11 +27,11 @@ public class UserService {
     }
 
     /**
-     * Get user by ID.
+     * Get user by Email.
      *
      * @return
      */
-    public User getUserByID() {
+    public User getUserByEmail() {
         //TODO
         return null;
     }
