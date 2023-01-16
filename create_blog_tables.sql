@@ -14,10 +14,10 @@ COMMENT 'User Table';
 
 CREATE TABLE `blog_post`(
 	`id` INT(20) NOT null AUTO_INCREMENT COMMENT 'postID',
-    `userID` VARCHAR(32) NOT null,
-    `feeling_rating` TINYINT(1) DEFAULT '3' COMMENT 'rating of current feeling, range from 1 to 5',
+    `userID` INT(20) NOT null,
+    `feeling_rating` INT(20) DEFAULT '3' COMMENT 'rating of current feeling, range from 1 to 5',
 	`content` VARCHAR(255) NOT null COMMENT 'text content of the post',
-    `score` TINYINT(1) DEFAULT null COMMENT 'sentiment analysis result of the content',
+    `score` INT(20) DEFAULT null COMMENT 'sentiment analysis result of the content',
 	PRIMARY KEY(`id`)
 )
 COMMENT 'Blog Post Table';

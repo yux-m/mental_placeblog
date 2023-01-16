@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "blog_post", schema = "mental_placeblog")
+@Table(name = "blog_post", schema = "mental_placeblog", catalog = "")
 public class BlogPost {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -13,16 +13,16 @@ public class BlogPost {
     private int id;
     @Basic
     @Column(name = "userID")
-    private String userId;
+    private int userId;
     @Basic
     @Column(name = "feeling_rating")
-    private Byte feelingRating;
+    private int feelingRating;
     @Basic
     @Column(name = "content")
     private String content;
     @Basic
     @Column(name = "score")
-    private Byte score;
+    private int score;
 
     public int getId() {
         return id;
@@ -32,19 +32,19 @@ public class BlogPost {
         this.id = id;
     }
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
-    public Byte getFeelingRating() {
+    public int getFeelingRating() {
         return feelingRating;
     }
 
-    public void setFeelingRating(Byte feelingRating) {
+    public void setFeelingRating(int feelingRating) {
         this.feelingRating = feelingRating;
     }
 
@@ -56,11 +56,11 @@ public class BlogPost {
         this.content = content;
     }
 
-    public Byte getScore() {
+    public int getScore() {
         return score;
     }
 
-    public void setScore(Byte score) {
+    public void setScore(int score) {
         this.score = score;
     }
 
@@ -69,7 +69,7 @@ public class BlogPost {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BlogPost blogPost = (BlogPost) o;
-        return id == blogPost.id && Objects.equals(userId, blogPost.userId) && Objects.equals(feelingRating, blogPost.feelingRating) && Objects.equals(content, blogPost.content) && Objects.equals(score, blogPost.score);
+        return id == blogPost.id && userId == blogPost.userId && Objects.equals(feelingRating, blogPost.feelingRating) && Objects.equals(content, blogPost.content) && Objects.equals(score, blogPost.score);
     }
 
     @Override
