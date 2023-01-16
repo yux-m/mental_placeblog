@@ -1,5 +1,8 @@
 package cit59x.hackathon.mental_placeblog.controller;
 
+import cit59x.hackathon.mental_placeblog.vo.LoginVO;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,9 +38,8 @@ public class UserController {
      * @return
      */
     @RequestMapping("/login")
-    public String toLogin() {
-        //
-        return null;
+    public String toLoginPage() {
+        return "login";
     }
 
     /**
@@ -47,16 +49,9 @@ public class UserController {
      * @return
      */
     @RequestMapping("/login/process")
-    public String login() {
+    public String login(LoginVO loginVO, HttpServletRequest request, HttpServletResponse response) {
         //
         return null;
     }
 
-    @RequestMapping("/update_password")
-    public String toUpdatePassword() {
-        //
-        return null;
-    }
-
-    //Other features including update password/info are to be decided & added
 }

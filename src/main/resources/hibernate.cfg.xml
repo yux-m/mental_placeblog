@@ -10,6 +10,7 @@
         <property name="connection.password">000000</property>
         <mapping class="cit59x.hackathon.mental_placeblog.entity.BlogPost"/>
         <mapping class="cit59x.hackathon.mental_placeblog.entity.User"/>
+        <mapping class="cit59x.hackathon.mental_placeblog.entity.Quote"/>
         <!-- <property name="connection.username"/> -->
         <!-- <property name="connection.password"/> -->
 
