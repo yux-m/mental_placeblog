@@ -14,4 +14,15 @@ public class SurveyController {
         //TODO:return "survey";
         return "test_page";
     }
+
+    /**
+     * Direct to help page, with contact info provided.
+     *
+     * @return
+     */
+    @RequestMapping("/help")
+    public String directToHelp() {
+        //TODO:return "survey";
+        return "help";
+    }
 }

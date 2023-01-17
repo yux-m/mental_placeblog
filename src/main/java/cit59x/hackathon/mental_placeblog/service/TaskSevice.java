@@ -1,8 +1,12 @@
 package cit59x.hackathon.mental_placeblog.service;
 
+import cit59x.hackathon.mental_placeblog.entity.Quote;
 import cit59x.hackathon.mental_placeblog.repo.QuoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class TaskSevice {
@@ -20,19 +24,22 @@ public class TaskSevice {
     }
 
     /**
-     * Get a proper quote from database and return.
+     * Get 4 quotes from database and return.
      *
-     * @return quote content
+     * @return a list of 4 quotes
      */
-    public String getQuote() {
+    public List<Quote> getQuotes() {
 //        factory = Persistence.createEntityManagerFactory("default");
 //        manager = factory.createEntityManager();
 //        session = manager.unwrap(Session.class);
 //        transaction = manager.getTransaction();
         //get a random quote from db
-        int totalCount = (int) quoteRepository.count();
-        int id = (int) ((Math.random() * (totalCount - 1)) + 1);
-        String res = quoteRepository.findById(id).get().getContent();
+        int totalSetCount = (int) quoteRepository.count() / 4;
+        int id = (int) ((Math.random() * (totalSetCount - 1)) + 1);
+        List<Quote> res = new ArrayList<>();
+        for (int i = 0; i < 4; i++) {
+            res.add(quoteRepository.findById(id + i).get());
+        }
 //        session.close();
 //        manager.close();
 //        factory.close();

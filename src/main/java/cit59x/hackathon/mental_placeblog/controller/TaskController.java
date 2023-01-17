@@ -1,11 +1,14 @@
 package cit59x.hackathon.mental_placeblog.controller;
 
+import cit59x.hackathon.mental_placeblog.entity.Quote;
 import cit59x.hackathon.mental_placeblog.service.TaskSevice;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/task")
@@ -43,8 +46,8 @@ public class TaskController {
      */
     @RequestMapping("/quote")
     public String quote(Model model) {
-        String quote = taskSevice.getQuote();
-        model.addAttribute("quote", quote);
+        List<Quote> quotes = taskSevice.getQuotes();
+        model.addAttribute("quotes", quotes);
         return "task_quote";
     }
 
