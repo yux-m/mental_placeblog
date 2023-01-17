@@ -1,9 +1,9 @@
 package cit59x.hackathon.mental_placeblog.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 @RequestMapping("/test")
 public class TestController {
 
@@ -15,6 +15,6 @@ public class TestController {
      */
     @RequestMapping("/test")
     public String Test() {
-        return "Test Page.";
+        return "test_page";
     }
 }

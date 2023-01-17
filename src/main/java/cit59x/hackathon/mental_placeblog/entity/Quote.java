@@ -5,6 +5,10 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity
+@NamedQuery(
+        name = "Quote.byID",
+        query = "SELECT i FROM Quote i WHERE i.id=?1"
+)
 public class Quote {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

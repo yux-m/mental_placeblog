@@ -1,13 +1,15 @@
 package cit59x.hackathon.mental_placeblog.controller;
 
 import cit59x.hackathon.mental_placeblog.service.TaskSevice;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/blog")
+@Controller
+@RequestMapping("/task")
+@Slf4j
 public class TaskController {
 
     private final int THRESHOLD_1 = 20;
@@ -22,7 +24,7 @@ public class TaskController {
      *
      * @return page to be directed to
      */
-    @RequestMapping("/task")
+    @RequestMapping("/toTask")
     public String directToTask(Model model, int score) {
         //TODO: change task names
         if (score < 0 || score > 100) return "error";
@@ -39,7 +41,7 @@ public class TaskController {
      * @param model
      * @return
      */
-    @RequestMapping("/task/quote")
+    @RequestMapping("/quote")
     public String quote(Model model) {
         String quote = taskSevice.getQuote();
         model.addAttribute("quote", quote);

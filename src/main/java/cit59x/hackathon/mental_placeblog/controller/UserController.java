@@ -1,14 +1,26 @@
 package cit59x.hackathon.mental_placeblog.controller;
 
+import cit59x.hackathon.mental_placeblog.service.UserService;
 import cit59x.hackathon.mental_placeblog.vo.LoginVO;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import cit59x.hackathon.mental_placeblog.vo.RespBean;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@RestController
+@Controller
 @RequestMapping("/user")
+@Slf4j
 public class UserController {
+
+    private final UserService userService;
+
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
 
     /**
      * Direct to register page.
@@ -49,9 +61,14 @@ public class UserController {
      * @return
      */
     @RequestMapping("/login/process")
-    public String login(LoginVO loginVO, HttpServletRequest request, HttpServletResponse response) {
-        //
-        return null;
+    @ResponseBody
+    public RespBean login(LoginVO loginVO) {
+        //for debugging
+        System.out.println("Successfully got LoginVO\nemail:" + loginVO.getEmail());
+        System.out.println("password:" + loginVO.getPassword());
+        RespBean res = userService.login(loginVO);
+        System.out.println("response bean code: " + res.getCode());
+        return res;
     }
 
 }
