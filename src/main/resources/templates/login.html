@@ -54,10 +54,22 @@
         display: none;
     }
 
+    .logo {
+        border-radius: 10%;
+    }
+
+    .bottom-padding {
+        padding-bottom: 2rem;
+    }
+
 
 </style>
 
+
 <main class="form-signin m-auto">
+
+    <h2 class="text-dark-grey bottom-padding">Welcome to Mental Spa!</h2>
+
     <form id="loginForm" method="post" name="loginForm">
 
         <div class="alert alert-primary error-message" data-dismiss="alert" role="alert">
@@ -67,9 +79,11 @@
             Success!
         </div>
 
-        <!-- icon -->
-        <span style="font-size: 4em; color: Gold;">
-            <i class="fa-solid fa-bolt-lightning"></i>
+
+        <!-- logo -->
+        <span>
+            <img class="logo" src="../static/img/logo.jpg" style="width: 100px; height: 100px;">
+            <p></p>
         </span>
 
         <h1 class="h3 mb-3 fw-normal"><b>Sign in</b></h1>
