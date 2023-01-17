@@ -6,10 +6,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/survey")
+@RequestMapping("/main")
 @Slf4j
-public class SurveyController {
-    @RequestMapping("/questions")
+public class MainController {
+    @RequestMapping("/survey")
     public String directToSurvey(Model model) {
         //TODO:return "survey";
         return "test_page";

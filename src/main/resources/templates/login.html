@@ -143,7 +143,7 @@
                 if (data.code === 200) {    //successfully signed in, redirect
                     $('.error-message').fadeOut('slow');
                     $('.success-message').fadeIn('slow');   //prompt success message (however it's hardly seen...)
-                    window.location.href = "/survey/questions";
+                    window.location.href = "/main/survey";
                 } else {
                     $('.error-message').text(data.message); //prompt error message passed from backend
                     $('.error-message').fadeIn('slow');
