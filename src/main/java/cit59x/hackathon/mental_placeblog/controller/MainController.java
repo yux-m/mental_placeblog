@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainController {
     @RequestMapping("/survey")
     public String directToSurvey(Model model) {
-        //TODO:return "survey";
-        return "test_page";
+        return "survey";
     }
 
     /**
