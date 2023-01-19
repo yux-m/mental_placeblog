@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.music{
+    width: 500px;
+    height: 500px;
+    background: url(img/background_picture.jpg) no-repeat;
+    border-radius: 20px;
+    margin: 100px auto;
+    text-align: center;
+    background-size:cover;
+}
+
+.container h1{
+    padding: 60px 0 ;   
+}
+
+.button span{
+    margin: 0 20px;
+    cursor: pointer;
+}

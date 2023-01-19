@@ -34,3 +34,5 @@ build/
 
 ### sensitive data ###
 sensitive.properties
+
+.DS_Store

@@ -1,10 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
 </head>
-<body>
+    <meta charset = "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content = "IE= edge">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "../static/task_song_font/iconfont.css">
+    <link rel = "stylesheet" href = "../static/task_song.css">
+    <script type="text/javascript" src = "../static/task_song.js"></script>
 
+<body>
+    <div class="music">
+        <div class = container>
+            <h1 class = "musicName">music playlist</h1>
+            <audio class="audio" controls></audio>
+        </div>
+        
+        <div class="button">
+
+            <span class = "previous iconfont icon-previousSong"></span>
+            <span class = "play iconfont icon-playing"></span>
+            <span class = "pause iconfont icon-paused"></span>
+            <span class = "next iconfont icon-nextSong"></span>
+
+            <input class = "volume" type = "range" step = "0.1" max = "2" min = "0">
+        </div>
+
+    </div>
+    
 </body>
+
 </html>
