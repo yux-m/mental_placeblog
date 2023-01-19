@@ -56,4 +56,14 @@ public class TaskController {
         return "task_clean";
     }
 
+    @RequestMapping("/song")
+    public String task_song() {
+        return "task_song";
+    }
+
+    @RequestMapping("/hour")
+    public String task_hour() {
+        return "task_one_hour";
+    }
+
 }

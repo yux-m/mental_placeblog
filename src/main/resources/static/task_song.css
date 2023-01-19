@@ -1,23 +1,23 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-.music{
+.music {
     width: 500px;
     height: 500px;
-    background: url(img/background_picture.jpg) no-repeat;
+    background: url(https://res.cloudinary.com/dvidz8bwi/image/upload/v1674142633/CIT%20Hackathon/background_picture.jpg) no-repeat;
     border-radius: 20px;
     margin: 100px auto;
     text-align: center;
-    background-size:cover;
+    background-size: cover;
 }
 
-.container h1{
-    padding: 60px 0 ;   
+.container h1 {
+    padding: 60px 0;
 }
 
-.button span{
+.button span {
     margin: 0 20px;
     cursor: pointer;
 }
