@@ -31,7 +31,7 @@ public class TaskController {
     public String directToTask(Model model, int score) {
         //TODO: change task names
         if (score < 0 || score > 100) return "error";
-        else if (score <= THRESHOLD_1) return quote(model);
+        else if (score <= THRESHOLD_1) return "task1";
         else if (score <= THRESHOLD_2) return "task2";
         else if (score <= THRESHOLD_3) return "task3";
         else if (score <= THRESHOLD_4) return "task4";
