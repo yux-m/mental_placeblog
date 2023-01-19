@@ -66,4 +66,9 @@ public class TaskController {
         return "task_one_hour";
     }
 
+    @RequestMapping("/all")
+    public String allTasks() {
+        return "all_tasks";
+    }
+
 }
