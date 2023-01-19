@@ -43,7 +43,7 @@ public class UserService {
         //if password different, error: wrong password
         if (!password.equals(user.getPassword())) return RespBean.error(RespBeanEnum.LOGIN_ERROR);
         //else, success
-        System.out.println("Successfully signed in!");
+        //System.out.println("Successfully signed in!");
         return RespBean.success(0);
     }
 

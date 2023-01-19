@@ -64,10 +64,10 @@ public class UserController {
     @ResponseBody
     public RespBean login(LoginVO loginVO) {
         //for debugging
-        System.out.println("Successfully got LoginVO\nemail:" + loginVO.getEmail());
-        System.out.println("password:" + loginVO.getPassword());
+        //System.out.println("Successfully got LoginVO\nemail:" + loginVO.getEmail());
+        //System.out.println("password:" + loginVO.getPassword());
         RespBean res = userService.login(loginVO);
-        System.out.println("response bean code: " + res.getCode());
+        //System.out.println("response bean code: " + res.getCode());
         return res;
     }
 
