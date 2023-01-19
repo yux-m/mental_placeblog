@@ -51,5 +51,9 @@ public class TaskController {
         return "task_quote";
     }
 
+    @RequestMapping("/clean")
+    public String task_clean() {
+        return "task_clean";
+    }
 
 }

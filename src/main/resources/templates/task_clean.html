@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Get Help</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="Hugo 0.108.0" name="generator">
+    <title>Clean a desk (virtually)</title>
+
     <!--  Bootstrap  -->
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" rel="stylesheet">
@@ -33,17 +32,10 @@
             color: #484446;
         }
 
-        .bottom-padding {
-            padding-bottom: 2rem;
-        }
-
-        .phone-number-colored {
-            color: mediumvioletred;
-        }
     </style>
+
 </head>
 <body>
-
 <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -54,36 +46,43 @@
         </ul>
 
         <!--        <div class="col-md-3 text-end">-->
-        <!--            <button type="button" class="btn btn-outline-primary me-2">Login</button>-->
-        <!--            <button type="button" class="btn btn-primary">Sign-up</button>-->
+        <!--            <a class="btn btn-outline-info me-2" href="/user/login" type="button">Sign in</a>-->
+        <!--            <button class="btn btn-primary" type="button">Sign-up</button>-->
         <!--        </div>-->
     </header>
 
-    <main class="text-center">
-
-        <div class="container">
-            <div class="py-5 text-center">
-                <h2 class="text-dark-grey"> Call </h2>
-                <h2 class="phone-number-colored"><b>215-898-7021</b></h2>
-                <h2 class="text-dark-grey"> and press <b class="phone-number-colored">1</b></h2>
-                <h2 class="text-dark-grey bottom-padding"> at any time of the day or night.</h2>
-                <a class="btn btn-outline-primary btn-lg"
-                   href="https://wellness.upenn.edu/student-health-and-counseling/student-health-and-counseling-counseling#Schedule%20an%20Appointment"
-                   type="button">
-                    <b>I wanna talk to someone in person</b>.
-                </a>
-            </div>
+    <div class="p-4 p-md-5 mb-4 rounded text-bg-light">
+        <div class="col-md-6 px-0">
+            <h2 class="text-dark-grey">Click to clean the desk!</h2>
+            <img id="desk-img" onclick="nextImg()"
+                 src="https://res.cloudinary.com/dvidz8bwi/image/upload/v1674142628/CIT%20Hackathon/task_clean/clean_desk_09.jpg"
+                 width="840">
         </div>
-
-    </main>
-
+    </div>
 </div>
 
 <!-- include Bootstrap js -->
 <script crossorigin="anonymous"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
+<!-- include SweetAlert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
+
+<script>
+    var count = 9;
+
+    function nextImg() {
+        count++;
+        if (count > 22) swal("Good job!", "You've cleaned the desk!", "success");
+        else {
+            var path = "https://res.cloudinary.com/dvidz8bwi/image/upload/v1674142628/CIT%20Hackathon/task_clean/clean_desk_" + count + ".jpg";
+            document.getElementById("desk-img").src = path;
+            if (count === 15 || count === 18) swal("Found something!");
+            if (count === 22) swal("Good job!", "You've cleaned the desk!", "success");
+        }
+    }
+</script>
+
 </html>
