@@ -15,9 +15,9 @@
 
 ## Main Tech Facts 
 
-|  Frontend  |  Backend  |  Database  |
-|:----------:|:---------:|:----------:|
-| HTML/CSS, JavaScript, Bootstrap | SpringBoot, Hibernate | MySQL |
+|  Frontend  |  Backend  |  Database  |   Cloud Storage   |
+|:----------:|:---------:|:----------:|:----------:|
+| HTML/CSS, JavaScript, jQuery, Bootstrap | SpringBoot, Hibernate | MySQL | Cloudinary |
 
 
 ## Overview
