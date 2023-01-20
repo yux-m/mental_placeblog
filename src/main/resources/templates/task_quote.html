@@ -54,7 +54,7 @@
         }
 
         /* to prevent simple copy & paste */
-        .cannot-cppy {
+        .cannot-copy {
             -webkit-user-select: none;
             -khtml-user-select: none;
             -moz-user-select: none;
@@ -106,7 +106,7 @@
                 <div class="row g-3" th:each="quote: ${quotes}">
                     <div class="col-12">
                         <!-- set id with Thymeleaf in sequence for function check() use-->
-                        <label class="form-label cannot-cppy" th:id="${#ids.seq('target')}"
+                        <label class="form-label cannot-copy" th:id="${#ids.seq('target')}"
                                th:text="${quote.getContent()}"></label>
                         <div class="input-group">
                             <input class="form-control" placeholder="Type here" th:id="${#ids.seq('typed')}"
