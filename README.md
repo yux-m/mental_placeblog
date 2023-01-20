@@ -22,4 +22,3 @@
 
 ## Overview
 
-# TODO: presentation video here
