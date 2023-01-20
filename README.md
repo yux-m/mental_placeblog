@@ -22,3 +22,7 @@
 
 ## Overview
 
+* Presentation Video: https://youtu.be/ZyNAfTr4icc
+* More Detailed Introduction: https://youtu.be/uxNKvH1cxPA
+
+In addition to the main tech stack, we've also learned a lot about development process, GitHub collaboration, protection of sensitive data (by separating them into another file and adding it to .gitignore), etc., which make this project experience more valuable.
